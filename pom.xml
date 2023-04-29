@@ -65,6 +65,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>User-Management</finalName>
 	</build>
 
 </project>
