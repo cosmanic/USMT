@@ -49,14 +49,23 @@ AWS CLI Commands
 
 add aws code build then in thir role add two permission AmazonEC2ContainerRegistryFullAccess and AmazonEC2ContainerRegistryPowerUser
 
+----------------docker image pull on local-------------------------
 
-mvn spring-boot:build-image
-docker network create springboot-postgres
+mvn spring-boot:build-image  --to build docker image
+
+docker pull errajeevranjanmailid/usmt:0.0.2-SNAPSHOT  ---to pull docker image of app
+
+
+docker network create springboot-postgres  --create network
+
+docker pull postgres --- pull postgres image
 
 docker run --name postgresql --network springboot-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres
 
-psql -h localhost -p 5432 -U postgres -d postgres
-docker exec -it 6ef36ea49ec6 bash
+docker exec -it 6ef36ea49ec6 bash  -- to enter in container
+
+psql -h localhost -p 5432 -U postgres -d postgres   --login in database
+
 CREATE DATABASE usmt;
 
 docker run --network springboot-postgres --name springboot-postgres-container -p 8080:8080 usmt:0.0.1-SNAPSHOT
