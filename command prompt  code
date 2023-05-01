@@ -1,0 +1,317 @@
+// command prompt code execution for gettting docker in your local operating system
+// ☑️ for command 
+// ✅ for complete
+//USMT User management system:
+
+☑️
+C:\Users\HP>docker info
+
+Client:
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.10.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.17.3
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  dev: Docker Dev Environments (Docker Inc.)
+    Version:  v0.1.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-dev.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.19
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v0.1.0-beta.4
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sbom.exe
+  scan: Docker Scan (Docker Inc.)
+    Version:  v0.26.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scan.exe
+  scout: Command line tool for Docker Scout (Docker Inc.)
+    Version:  v0.10.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 23.0.5
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 1
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 2806fc1057397dbaeefbea0e4e17bddfbd388f38
+ runc version: v1.1.5-0-gf19387a
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+ Kernel Version: 5.15.90.1-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 3.73GiB
+ Name: docker-desktop
+ ID: c453b153-883e-4f12-9859-702a1657d368
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Registry: https://index.docker.io/v1/
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+WARNING: No blkio throttle.read_bps_device support
+WARNING: No blkio throttle.write_bps_device support
+WARNING: No blkio throttle.read_iops_device support
+WARNING: No blkio throttle.write_iops_device support
+
+☑️☑️
+C:\Users\HP>docker pull errajeevranjanmailid/usmt:0.0.2-SNAPSHOT
+0.0.2-SNAPSHOT: Pulling from errajeevranjanmailid/usmt
+
+5e995c53af94: Pull complete
+99625535a8be: Pull complete
+cde852d6547b: Pull complete
+69e45bfbba6c: Pull complete
+b08a692eda6b: Pull complete
+2c789f81eefc: Pull complete
+66279673f5c8: Pull complete
+490f8217b509: Pull complete
+4ba19aa5ea49: Pull complete
+5c96df4fa744: Pull complete
+f6767b1a054b: Pull complete
+9ad49796e8f6: Pull complete
+46088954c5cc: Pull complete
+c3bb63ae433b: Pull complete
+956200cea8a0: Pull complete
+ed86c2eb4412: Pull complete
+b30c3ba7c9a0: Pull complete
+d536624bf987: Pull complete
+4f4fb700ef54: Pull complete
+403409f1842d: Pull complete
+c79155d9c77b: Pull complete
+2160b0633ef6: Pull complete
+3a4cb709502c: Pull complete
+Digest: sha256:b672a3c0e300f4af897a26cf00f0cd0077fc14788555150705e586842315d778
+Status: Downloaded newer image for errajeevranjanmailid/usmt:0.0.2-SNAPSHOT
+docker.io/errajeevranjanmailid/usmt:0.0.2-SNAPSHOT
+
+☑️☑️☑️
+C:\Users\HP>docker pull postgres
+Using default tag: latest
+latest: Pulling from library/postgres
+26c5c85e47da: Pull complete
+1c30a4c3f519: Pull complete
+d5c0f1ae682d: Pull complete
+1b1b2890ec0f: Pull complete
+391087799df7: Pull complete
+b413b4057e31: Pull complete
+4fa4edfeab8b: Pull complete
+b0a4d596bc61: Pull complete
+f6d73cd87199: Pull complete
+62b0bb33c69b: Pull complete
+bb0ddb7e7f1a: Pull complete
+583ec94d38ee: Pull complete
+efdf2a922e82: Pull complete
+Digest: sha256:6cc97262444f1c45171081bc5a1d4c28b883ea46a6e0d1a45a8eac4a7f4767ab
+Status: Downloaded newer image for postgres:latest
+docker.io/library/postgres:latest
+
+☑️☑️☑️☑️
+C:\Users\HP>docker images
+REPOSITORY                  TAG              IMAGE ID       CREATED        SIZE
+postgres                    latest           ceccf204404e   2 weeks ago    379MB
+errajeevranjanmailid/usmt   0.0.2-SNAPSHOT   1e6481788c08   43 years ago   289MB
+
+☑️☑️☑️☑️☑️
+C:\Users\HP>docker network create springboot-postgres
+8d24ab3354cab332fcd8a290ea425addf46dd6b3ade687770a53f5e35a9799f2
+
+☑️☑️☑️☑️☑️☑️
+C:\Users\HP>docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+☑️☑️☑️☑️☑️☑️☑️
+C:\Users\HP>docker run --name postgresql --network springboot-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres
+0dadb00a7362e8f47ab18e0615b0bde0c592a16a045831c59c8b2aa8055a1ae9
+
+☑️☑️☑️☑️☑️☑️☑️☑️
+C:\Users\HP>docker ps
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS         PORTS                    NAMES
+0dadb00a7362   postgres   "docker-entrypoint.s…"   12 seconds ago   Up 8 seconds   0.0.0.0:5432->5432/tcp   postgresql
+
+☑️☑️☑️☑️☑️☑️☑️☑️☑️
+C:\Users\HP>docker exec -it 0dadb00a7362 bash
+root@0dadb00a7362:/# psql -h localhost -p 5432 -U postgres -d postgres
+psql (15.2 (Debian 15.2-1.pgdg110+1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE usmt;
+CREATE DATABASE
+postgres=# ^C
+postgres=# ^C
+postgres=# exit
+root@0dadb00a7362:/# exit
+exit
+
+☑️☑️✅✅✅ // complete
+C:\Users\HP>docker run --network springboot-postgres --name springboot-postgres-container -p 8080:8080 errajeevranjanmailid/usmt:0.0.2-SNAPSHOT
+Setting Active Processor Count to 8
+Calculating JVM memory based on 2266596K available memory
+For more information on this calculation, see https://paketo.io/docs/reference/java-reference/#memory-calculator
+Calculated JVM Memory Configuration: -XX:MaxDirectMemorySize=10M -Xmx1641287K -XX:MaxMetaspaceSize=113308K -XX:ReservedCodeCacheSize=240M -Xss1M (Total Memory: 2266596K, Thread Count: 250, Loaded Class Count: 17591, Headroom: 0%)
+Enabling Java Native Memory Tracking
+Adding 124 container CA certificates to JVM truststore
+Spring Cloud Bindings Enabled
+Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpacks_bellsoft-liberica/java-security-properties/java-security.properties -XX:+ExitOnOutOfMemoryError -XX:ActiveProcessorCount=8 -XX:MaxDirectMemorySize=10M -Xmx1641287K -XX:MaxMetaspaceSize=113308K -XX:ReservedCodeCacheSize=240M -Xss1M -XX:+UnlockDiagnosticVMOptions -XX:NativeMemoryTracking=summary -XX:+PrintNMTStatistics -Dorg.springframework.cloud.bindings.boot.enable=true
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.5)
+
+2023-05-01 07:38:04.993  INFO 1 --- [           main] com.ecotech.usmt.UsmtApplication         : Starting UsmtApplication v0.0.1-SNAPSHOT using Java 11.0.19 on 603861a99325 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
+2023-05-01 07:38:04.996  INFO 1 --- [           main] com.ecotech.usmt.UsmtApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-05-01 07:38:06.095  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 07:38:06.212  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interfaces.
+2023-05-01 07:38:07.378  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 07:38:07.396  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 07:38:07.396  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-05-01 07:38:07.508  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 07:38:07.508  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2428 ms
+2023-05-01 07:38:07.773  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 07:38:07.851  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-05-01 07:38:08.073  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 07:38:08.218  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 07:38:08.511  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 07:38:08.539  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+Hibernate: drop table if exists userdetails cascade
+2023-05-01 07:38:09.806  WARN 1 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-05-01 07:38:09.807  WARN 1 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : table "userdetails" does not exist, skipping
+Hibernate: drop sequence if exists hibernate_sequence
+2023-05-01 07:38:09.810  WARN 1 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-05-01 07:38:09.810  WARN 1 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : sequence "hibernate_sequence" does not exist, skipping
+Hibernate: create sequence hibernate_sequence start 1 increment 1
+Hibernate: create table userdetails (userid int8 not null, appid int4, dob int4, email varchar(255), fname varchar(255), gender varchar(255), imageid int4, lname varchar(255), mobilenumber int4, password varchar(255), socialid int4, usertype varchar(255), primary key (userid))
+2023-05-01 07:38:09.843  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 07:38:09.884  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 07:38:10.884  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 07:38:11.596  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 07:38:11.617  INFO 1 --- [           main] com.ecotech.usmt.UsmtApplication         : Started UsmtApplication in 7.295 seconds (JVM running for 8.558)
+2023-05-01 07:52:21.740  INFO 1 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 07:52:21.745  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 07:52:21.796  INFO 1 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 51 ms
+Hibernate: select userdetail0_.userid as userid1_0_, userdetail0_.appid as appid2_0_, userdetail0_.dob as dob3_0_, userdetail0_.email as email4_0_, userdetail0_.fname as fname5_0_, userdetail0_.gender as gender6_0_, userdetail0_.imageid as imageid7_0_, userdetail0_.lname as lname8_0_, userdetail0_.mobilenumber as mobilenu9_0_, userdetail0_.password as passwor10_0_, userdetail0_.socialid as sociali11_0_, userdetail0_.usertype as usertyp12_0_ from userdetails userdetail0_
+Hibernate: select nextval ('hibernate_sequence')
+Hibernate: insert into userdetails (appid, dob, email, fname, gender, imageid, lname, mobilenumber, password, socialid, usertype, userid) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select userdetail0_.userid as userid1_0_0_, userdetail0_.appid as appid2_0_0_, userdetail0_.dob as dob3_0_0_, userdetail0_.email as email4_0_0_, userdetail0_.fname as fname5_0_0_, userdetail0_.gender as gender6_0_0_, userdetail0_.imageid as imageid7_0_0_, userdetail0_.lname as lname8_0_0_, userdetail0_.mobilenumber as mobilenu9_0_0_, userdetail0_.password as passwor10_0_0_, userdetail0_.socialid as sociali11_0_0_, userdetail0_.usertype as usertyp12_0_0_ from userdetails userdetail0_ where userdetail0_.userid=?
+Hibernate: select userdetail0_.userid as userid1_0_, userdetail0_.appid as appid2_0_, userdetail0_.dob as dob3_0_, userdetail0_.email as email4_0_, userdetail0_.fname as fname5_0_, userdetail0_.gender as gender6_0_, userdetail0_.imageid as imageid7_0_, userdetail0_.lname as lname8_0_, userdetail0_.mobilenumber as mobilenu9_0_, userdetail0_.password as passwor10_0_, userdetail0_.socialid as sociali11_0_, userdetail0_.usertype as usertyp12_0_ from userdetails userdetail0_
+Hibernate: select nextval ('hibernate_sequence')
+Hibernate: insert into userdetails (appid, dob, email, fname, gender, imageid, lname, mobilenumber, password, socialid, usertype, userid) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select userdetail0_.userid as userid1_0_, userdetail0_.appid as appid2_0_, userdetail0_.dob as dob3_0_, userdetail0_.email as email4_0_, userdetail0_.fname as fname5_0_, userdetail0_.gender as gender6_0_, userdetail0_.imageid as imageid7_0_, userdetail0_.lname as lname8_0_, userdetail0_.mobilenumber as mobilenu9_0_, userdetail0_.password as passwor10_0_, userdetail0_.socialid as sociali11_0_, userdetail0_.usertype as usertyp12_0_ from userdetails userdetail0_
+Hibernate: select userdetail0_.userid as userid1_0_, userdetail0_.appid as appid2_0_, userdetail0_.dob as dob3_0_, userdetail0_.email as email4_0_, userdetail0_.fname as fname5_0_, userdetail0_.gender as gender6_0_, userdetail0_.imageid as imageid7_0_, userdetail0_.lname as lname8_0_, userdetail0_.mobilenumber as mobilenu9_0_, userdetail0_.password as passwor10_0_, userdetail0_.socialid as sociali11_0_, userdetail0_.usertype as usertyp12_0_ from userdetails userdetail0_ where userdetail0_.email=? and userdetail0_.password=?
+Hibernate: select userdetail0_.userid as userid1_0_, userdetail0_.appid as appid2_0_, userdetail0_.dob as dob3_0_, userdetail0_.email as email4_0_, userdetail0_.fname as fname5_0_, userdetail0_.gender as gender6_0_, userdetail0_.imageid as imageid7_0_, userdetail0_.lname as lname8_0_, userdetail0_.mobilenumber as mobilenu9_0_, userdetail0_.password as passwor10_0_, userdetail0_.socialid as sociali11_0_, userdetail0_.usertype as usertyp12_0_ from userdetails userdetail0_
+2023-05-01 08:07:06.426  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 08:07:06.447  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 08:07:06.494  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+Native Memory Tracking:
+
+Total: reserved=2278040787, committed=270951635
+-                 Java Heap (reserved=1681915904, committed=95420416)
+                            (mmap: reserved=1681915904, committed=95420416)
+
+-                     Class (reserved=170520204, committed=71188108)
+                            (classes #13068)
+                            (  instance classes #12071, array classes #997)
+                            (malloc=2064012 #29802)
+                            (mmap: reserved=168456192, committed=69124096)
+                            (  Metadata:   )
+                            (    reserved=60817408, committed=59686912)
+                            (    used=58393296)
+                            (    free=1293616)
+                            (    waste=0 =0.00%)
+                            (  Class space:)
+                            (    reserved=107638784, committed=9437184)
+                            (    used=8641640)
+                            (    free=795544)
+                            (    waste=0 =0.00%)
+
+-                    Thread (reserved=25313304, committed=1159192)
+                            (thread #24)
+                            (stack: reserved=25202688, committed=1048576)
+                            (malloc=83784 #146)
+                            (arena=26832 #46)
+
+-                      Code (reserved=254702472, committed=16462728)
+                            (malloc=1069960 #5430)
+                            (mmap: reserved=253632512, committed=15392768)
+
+-                        GC (reserved=114555275, committed=55687563)
+                            (malloc=18160011 #6772)
+                            (mmap: reserved=96395264, committed=37527552)
+
+-                  Compiler (reserved=9738218, committed=9738218)
+                            (malloc=23882 #587)
+                            (arena=9714336 #10)
+
+-                  Internal (reserved=439376, committed=439376)
+                            (malloc=406608 #1284)
+                            (mmap: reserved=32768, committed=32768)
+
+-                    Symbol (reserved=16185456, committed=16185456)
+                            (malloc=14344056 #172803)
+                            (arena=1841400 #1)
+
+-    Native Memory Tracking (reserved=3555640, committed=3555640)
+                            (malloc=9592 #118)
+                            (tracking overhead=3546048)
+
+-               Arena Chunk (reserved=694040, committed=694040)
+                            (malloc=694040)
+
+-                   Tracing (reserved=97, committed=97)
+                            (malloc=97 #5)
+
+-                   Logging (reserved=4596, committed=4596)
+                            (malloc=4596 #193)
+
+-                 Arguments (reserved=19061, committed=19061)
+                            (malloc=19061 #495)
+
+-                    Module (reserved=182648, committed=182648)
+                            (malloc=182648 #1882)
+
+-              Synchronizer (reserved=206304, committed=206304)
+                            (malloc=206304 #1706)
+
+-                 Safepoint (reserved=8192, committed=8192)
+                            (mmap: reserved=8192, committed=8192)
