@@ -14,7 +14,11 @@ Run your Docker image on AWS ECS (Elastic Container Service)
 - Tag Docker Image
 
 		docker tag <image-name> tag-name/<image-name>
-    
+
+The command to tag an image using an imageId is as follows:
+
+    docker tag 46ee47a7422d baeldung-java:9
+
 - Push Docker Image to Docker Hub
 
 		docker push tag-name/<image-name>
@@ -71,3 +75,21 @@ CREATE DATABASE usmt;
 docker run --network springboot-postgres --name springboot-postgres-container -p 8080:8080 usmt:0.0.1-SNAPSHOT
 
 
+--------------------------------
+
+install docker on ec2
+
+sudo yum update -y
+
+sudo yum install docker
+
+sudo service docker start
+
+sudo docker pull shiprasingh2/samsung:1
+
+sudo docker run -p 80:9091 --name spring-docker shiprasingh2/samsung:2
+
+
+
+
+-------------------------
