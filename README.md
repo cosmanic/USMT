@@ -5,7 +5,7 @@ Run your Docker image on AWS ECS (Elastic Container Service)
 
 - Build Docker Image.
 
-		mvn spring-boot:build-image
+		mvn spring-boot:build-image  --create image using springbuildpck  no need of dockerfile
    
 - Run Docker Image.
 
@@ -27,9 +27,18 @@ The command to tag an image using an imageId is as follows:
 
 <img width="576" alt="11" src="https://user-images.githubusercontent.com/25712816/91267149-570d0780-e790-11ea-8497-806b30cbcfc2.PNG">
 
+-------------------------dockerfile example----------
+FROM openjdk:11
+LABEL maintainer="com.Opera"
+ADD target/spring-boot-jenkins-integration.jar spring-boot-jenkins-integration.jar
+ENTRYPOINT ["java","-jar","spring-boot-jenkins-integration.jar"]
+
+-----------------------------------------
+
+
 1.	mvn clean install
-2.	Start the docker container
-3.	docker build -f Dockerfile -t aws-csr_spring-boot .
+2.	Start the docker application
+3.	docker build -f Dockerfile -t aws-csr_spring-boot .   ---> to create image using dockerfile
 4.	docker images
 5.	docker run -p 8080:8080 aws-csr_spring-boot
 
@@ -87,9 +96,16 @@ sudo service docker start
 
 sudo docker pull shiprasingh2/samsung:1
 
-sudo docker run -p 80:9091 --name spring-docker shiprasingh2/samsung:2
+sudo docker run -p 80:9091 --name spring-docker shiprasingh2/samsung:1
+
+
+in28min/aws-hello-world-rest-api:1.0.0-RELEASE --image with min size
 
 
 
 
 -------------------------
+connect through ssh to ec2 instance
+
+ssh -i .\dockerkeypair.pem ec2-user@13.126.104.206
+
