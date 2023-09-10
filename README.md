@@ -27,7 +27,7 @@ The command to tag an image using an imageId is as follows:
 
 <img width="576" alt="11" src="https://user-images.githubusercontent.com/25712816/91267149-570d0780-e790-11ea-8497-806b30cbcfc2.PNG">
 
--------------------------dockerfile example----------
+-------------------------dockerfile example----------for creating image through dockerfile only need dockerfile and docker build command---------------------
 FROM openjdk:11
 LABEL maintainer="com.Opera"
 ADD target/spring-boot-jenkins-integration.jar spring-boot-jenkins-integration.jar
